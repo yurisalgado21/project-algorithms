@@ -1,4 +1,4 @@
-from collections import Counter
+# from collections import Counter
 
 
 def quick_sort(nums):
@@ -20,14 +20,12 @@ def conditions(nums):
 
 
 def find_duplicate(nums):
-    if conditions(nums) is False:
+    """if conditions(nums) is False:
         return False
     result = quick_sort(nums)
     result = Counter(result)
     for key, value in result.items():
         if value > 1:
             return key
-    return False
-
-
-print(find_duplicate([3, 1, 2, 4, 6, 5, 7, 7, 7, 8]))
+    return False"""
+    pass
