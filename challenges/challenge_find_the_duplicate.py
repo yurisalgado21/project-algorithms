@@ -1,7 +1,7 @@
-# from collections import Counter
+from collections import Counter
 
 
-def quick_sort(nums):
+"""def quick_sort(nums):
     if len(nums) <= 1:
         return nums
     pivot = nums[len(nums) // 2]
@@ -9,6 +9,8 @@ def quick_sort(nums):
     middle = [x for x in nums if x == pivot]
     right = [x for x in nums if x > pivot]
     return quick_sort(left) + middle + quick_sort(right)
+
+"""
 
 
 def conditions(nums):
@@ -20,12 +22,12 @@ def conditions(nums):
 
 
 def find_duplicate(nums):
-    """if conditions(nums) is False:
-        return False
-    result = quick_sort(nums)
-    result = Counter(result)
-    for key, value in result.items():
-        if value > 1:
-            return key
-    return False"""
-    pass
+    try:
+        if conditions(nums) is False:
+            return False
+        result = Counter(nums)
+        if result.most_common(1)[0][1] == 1:
+            return False
+        return result.most_common(1)[0][0]
+    except AssertionError:
+        raise AssertionError
